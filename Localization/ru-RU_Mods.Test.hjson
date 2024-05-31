@@ -1,0 +1,23 @@
+Items: {
+	CoolStar: {
+		DisplayName: Прикольная Звезда
+		Tooltip: ""
+	}
+
+	FirstSword: {
+		DisplayName: Пепельный Рассекатель
+		Tooltip: ""
+	}
+
+	SkeletonBook: {
+		DisplayName: Книга Скелетов
+		Tooltip: ""
+	}
+
+	Absorber: {
+		// DisplayName: Absorber
+		// Tooltip: ""
+	}
+}
+
+Projectiles.Projectile1.DisplayName: Projectile1

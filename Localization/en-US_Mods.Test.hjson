@@ -1,0 +1,23 @@
+Items: {
+	CoolStar: {
+		DisplayName: Cool Star
+		Tooltip: ""
+	}
+
+	FirstSword: {
+		DisplayName: First Sword
+		Tooltip: ""
+	}
+
+	SkeletonBook: {
+		DisplayName: Skeleton Book
+		Tooltip: ""
+	}
+
+	Absorber: {
+		DisplayName: Absorber
+		Tooltip: ""
+	}
+}
+
+Projectiles.Projectile1.DisplayName: Projectile1
