@@ -127,25 +127,8 @@ $tf/
 # Guidance Automation Toolkit
 *.gpState
 
-# ReSharper is a .NET coding add-in
-_ReSharper*/
-*.[Rr]e[Ss]harper
-*.DotSettings.user
-
 # TeamCity is a build add-in
 _TeamCity*
-
-# DotCover is a Code Coverage Tool
-*.dotCover
-
-# AxoCover is a Code Coverage Tool
-.axoCover/*
-!.axoCover/settings.json
-
-# Coverlet is a free, cross platform Code Coverage Tool
-coverage*.json
-coverage*.xml
-coverage*.info
 
 # Visual Studio code coverage results
 *.coverage
@@ -192,10 +175,6 @@ publish/
 # in these scripts will be unencrypted
 PublishScripts/
 
-# NuGet Packages
-*.nupkg
-# NuGet Symbol Packages
-*.snupkg
 # The packages folder can be ignored because of Package Restore
 **/[Pp]ackages/*
 # except build/, which is used as an MSBuild target.
@@ -209,10 +188,6 @@ PublishScripts/
 # Microsoft Azure Build Output
 csx/
 *.build.csdef
-
-# Microsoft Azure Emulator
-ecf/
-rcf/
 
 # Windows Store app package directories and files
 AppPackages/
@@ -261,11 +236,6 @@ UpgradeLog*.htm
 ServiceFabricBackup/
 *.rptproj.bak
 
-# SQL Server files
-*.mdf
-*.ldf
-*.ndf
-
 # Business Intelligence projects
 *.rdl.data
 *.bim.layout
@@ -277,13 +247,6 @@ ServiceFabricBackup/
 
 # Microsoft Fakes
 FakesAssemblies/
-
-# GhostDoc plugin setting file
-*.GhostDoc.xml
-
-# Node.js Tools for Visual Studio
-.ntvs_analysis.dat
-node_modules/
 
 # Visual Studio 6 build log
 *.plg
@@ -301,24 +264,6 @@ node_modules/
 **/*.Server/GeneratedArtifacts
 **/*.Server/ModelManifest.xml
 _Pvt_Extensions
-
-# Paket dependency manager
-.paket/paket.exe
-paket-files/
-
-# FAKE - F# Make
-.fake/
-
-# CodeRush personal settings
-.cr/personal
-
-# Python Tools for Visual Studio (PTVS)
-__pycache__/
-*.pyc
-
-# Cake - Uncomment if you are using it
-# tools/**
-# !tools/packages.config
 
 # Tabs Studio
 *.tss
@@ -362,4 +307,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 
-icon.png
+*.icon.png

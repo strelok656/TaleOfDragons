@@ -1,5 +1,6 @@
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Test.Content.Items.Materials;
@@ -13,7 +14,7 @@ namespace Test.Content.Items.Weapons.Magic
         {
             // Быстро выставляем дефолтные настройки для маг. оружия
             Item.DefaultToMagicWeapon(
-                projType: ModContent.ProjectileType<Projectile1>(), // Стреляет нашим снарядом
+                projType: ModContent.ProjectileType<BloomingProj>(), // Стреляет нашим снарядом
                 singleShotTime: 35, // useTime & useAnimation
                 shotVelocity: 9f,
                 hasAutoReuse: true
@@ -37,6 +38,23 @@ namespace Test.Content.Items.Weapons.Magic
                 .AddIngredient(ItemID.CrimtaneBar, 12)
                 .AddTile(TileID.Anvils)
                 .Register();
+        }
+
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+        {
+            for (byte i=0; i<=1; i++) 
+            {
+                Projectile.NewProjectile(
+                    source,
+                    position,
+                    velocity,
+                    type,
+                    damage,
+                    knockback,
+                    player.whoAmI
+                );
+            }
+            return false;
         }
     }
 }

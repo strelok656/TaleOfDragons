@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 
 namespace Test.Content.Projectiles {
-    public class Projectile1 : ModProjectile {
+    public class BloomingProj : ModProjectile {
         public override void SetDefaults() {
             Projectile.DamageType = DamageClass.Melee; //Тип урона
             Projectile.scale = 2f; //Мультипликатор размера
@@ -17,10 +17,16 @@ namespace Test.Content.Projectiles {
             Projectile.light = 0.3f; // Кол-во излучаемого света
             Projectile.ignoreWater = true; // Игнорирует воду
             Projectile.tileCollide = false; // Не соприкасается с блоками
-            Projectile.alpha = 50; //Прозрачность
-            Projectile.Center = new Vector2(3f, -2f);
+            Projectile.alpha = 50; //Прозрачность   
+        }
 
-            
+        public override void AI()
+        {
+            Projectile.ai[0] += 1f;
+            if (Projectile.ai[0] == 4f)
+            {
+                
+            }
         }
     }
 }
