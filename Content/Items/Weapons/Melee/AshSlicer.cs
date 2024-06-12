@@ -1,4 +1,4 @@
-using Test.Content.Items.Materials; // Используем наш материал
+using Test.Content.Items.Materials;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -6,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace Test.Content.Items.Weapons.Melee
 {
-    public class FirstSword : ModItem
+    public class AshSlicer : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -15,8 +15,7 @@ namespace Test.Content.Items.Weapons.Melee
 
         public override void SetDefaults()
         {
-            Item.width = 40;
-            Item.height = 40;
+            Item.width = Item.height = 53;
             Item.scale = 1f; // Мультипликатор размера предметов. Важно: переменным с плавающей точкой, нужно добавлять "f" в конце.
             Item.rare = ItemRarityID.Blue; //Редкость. Смотри https://terraria.wiki.gg/wiki/Rarity
             Item.damage = 50; // Урон
@@ -25,9 +24,9 @@ namespace Test.Content.Items.Weapons.Melee
             Item.useTime = 20; //Длительность удара в тактах (60 тактов = 1 секунда)
             Item.useAnimation = 20; //Время анимации в тактах (60 тактов = 1 секунда)
             Item.knockBack = 6f; // Отбрасывание, 20 максимум
-            Item.autoReuse = true; //Автоматическое использование
+            Item.autoReuse = true;
             Item.value = 1000; // Цена в медных монетах
-            Item.useStyle = ItemUseStyleID.Swing; //Стиль анимации, смотри https://terraria.wiki.gg/wiki/Use_Style_IDs
+            Item.useStyle = ItemUseStyleID.Thrust; //Стиль анимации, смотри https://terraria.wiki.gg/wiki/Use_Style_IDs
             Item.UseSound = SoundID.Item1; // Издаваемый звук, смотри - https://terraria.wiki.gg/wiki/Sound_IDs
         }
 
@@ -36,7 +35,7 @@ namespace Test.Content.Items.Weapons.Melee
         {
             Recipe recipe = CreateRecipe();
             recipe.AddIngredient<CoolStar>(7); //Вот мой кастомный материал
-            recipe.AddIngredient(ItemID.CrimtaneBar, 3); // Кримтановый слиток
+            recipe.AddIngredient(ItemID.HellstoneBar, 10); // Адский слиток
             recipe.AddTile(TileID.Anvils); //Станция крафта, смотри - https://terraria.wiki.gg/wiki/Tile_IDs
             recipe.Register();
         }

@@ -18,6 +18,16 @@ Items: {
 		DisplayName: Absorber
 		Tooltip: ""
 	}
+
+	BloomingCrimtane: {
+		DisplayName: Blooming Crimtane
+		Tooltip: ""
+	}
+
+	AshSlicer: {
+		DisplayName: Ash Slicer
+		Tooltip: ""
+	}
 }
 
 Projectiles.Projectile1.DisplayName: Projectile1

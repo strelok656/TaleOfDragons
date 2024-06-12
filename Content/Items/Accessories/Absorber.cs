@@ -1,7 +1,6 @@
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
-using Test;
 
 
 namespace Test.Content.Items.Accessories 
@@ -24,8 +23,7 @@ namespace Test.Content.Items.Accessories
         public override void UpdateAccessory(Player player, bool hideVisual)
         {
             player.endurance = 0.9f;
-            player.GetDamage(DamageClass.Generic) += damageBonus;
-            player.GetModPlayer<GamePlayer>().Absorber = true;
+            /*player.GetModPlayer<GamePlayer>().Absorber = true;*/
         }
     }
 }

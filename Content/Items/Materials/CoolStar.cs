@@ -1,28 +1,26 @@
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.Localization;
 using Terraria.GameContent.Creative;
 
-namespace Test.Content.Items.Materials { //Здесь расположен код
+namespace Test.Content.Items.Materials { 
 	public class CoolStar : ModItem {
 		public override void SetStaticDefaults() {
-			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 10; //Кол-во предметов для открытия копирования в режиме приключения
+			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 10;
 		}
 
 		public override void SetDefaults() {
-			Item.width = 32; //Ширина спрайта
-			Item.height = 32; //Высота спрайта
-			Item.maxStack = 9999; //Максимальное кол-во предметов в ячейке
-			Item.value = 100; //Цена в медных монетах
-			Item.rare = ItemRarityID.Green; //Редкость
+			Item.width = Item.height = 32;
+			Item.maxStack = 9999; 
+			Item.value = 100;
+			Item.rare = ItemRarityID.Green; 
 		}
 
-		public override void AddRecipes() { //Рецепт
+		public override void AddRecipes() {
 			Recipe recipe = CreateRecipe();
-			recipe.AddIngredient(ItemID.FallenStar,1); //Звезда 75
-			recipe.AddIngredient(ItemID.CrimtaneOre,3); //Кримтановая руда
-			recipe.AddTile(TileID.Anvils); //На наковальне
+			recipe.AddIngredient(ItemID.FallenStar,1); // Р—РІРµР·РґР°
+			recipe.AddIngredient(ItemID.CrimtaneOre,3); // РљСЂРёРјС‚Р°РЅРѕРІР°СЏ СЂСѓРґР°
+			recipe.AddTile(TileID.Anvils); // РќР°РєРѕРІР°Р»СЊРЅСЏ
 			recipe.Register();
 		}
 	}
