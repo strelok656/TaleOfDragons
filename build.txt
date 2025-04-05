@@ -1,4 +1,4 @@
-displayName = My First Mod!!!
-author = ME
+displayName = Tale Of Dragons
+author = Strelok656, Papirus
 version = 0.1
 IncludeSource = true

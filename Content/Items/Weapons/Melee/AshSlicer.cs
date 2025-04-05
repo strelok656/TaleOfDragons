@@ -1,10 +1,11 @@
-using Test.Content.Items.Materials;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
+using ReLogic.Content;
+using Microsoft.Xna.Framework.Graphics;
 
-namespace Test.Content.Items.Weapons.Melee
+namespace TaleOfDragons.Content.Items.Weapons.Melee
 {
     public class AshSlicer : ModItem
     {
@@ -28,17 +29,17 @@ namespace Test.Content.Items.Weapons.Melee
             Item.value = 1000; // Цена в медных монетах
             Item.useStyle = ItemUseStyleID.Thrust; //Стиль анимации, смотри https://terraria.wiki.gg/wiki/Use_Style_IDs
             Item.UseSound = SoundID.Item1; // Издаваемый звук, смотри - https://terraria.wiki.gg/wiki/Sound_IDs
+            
         }
 
         //Рецепт
         public override void AddRecipes()
         {
             Recipe recipe = CreateRecipe();
-            recipe.AddIngredient<CoolStar>(7); //Вот мой кастомный материал
+            //recipe.AddIngredient<CoolStar>(7); //Вот мой кастомный материал
             recipe.AddIngredient(ItemID.HellstoneBar, 10); // Адский слиток
             recipe.AddTile(TileID.Anvils); //Станция крафта, смотри - https://terraria.wiki.gg/wiki/Tile_IDs
             recipe.Register();
         }
-
     }
 }

@@ -1,0 +1,25 @@
+Mods: {
+	TaleOfDragons: {
+		Items: {
+			AshSlicer: {
+				DisplayName: Ash Slicer
+				Tooltip: ""
+			}
+
+			BigTom: {
+				DisplayName: Big Tom
+				Tooltip: ""
+			}
+
+			MosquitoBullet: {
+				Tooltip: ""
+				DisplayName: Mosquito Bullet
+			}
+		}
+
+		Projectiles: {
+			MosquitoBulletProjectile.DisplayName: Mosquito Bullet Projectile
+			Mosquito.DisplayName: Mosquito
+		}
+	}
+}

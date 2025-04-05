@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Terraria.ModLoader;
 
-namespace Test
+namespace TaleOfDragons
 {
-	public class Test : Mod
+	public class TaleOfDragons : Mod
 	{
 
 	}
