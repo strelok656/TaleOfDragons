@@ -15,11 +15,28 @@ Mods: {
 				Tooltip: ""
 				DisplayName: Mosquito Bullet
 			}
+
+			HoneyBeer: {
+				DisplayName: Honey Beer
+				Tooltip:
+					'''
+					Makes you inflict {0}% more damage, increasing your defence by {1}, but reducing your health by {2} 
+
+					 How tasty!
+					'''
+			}
 		}
 
 		Projectiles: {
 			MosquitoBulletProjectile.DisplayName: Mosquito Bullet Projectile
 			Mosquito.DisplayName: Mosquito
+		}
+
+		Buffs: {
+			Honeymoon: {
+				DisplayName: Honeymoon
+				Description: Does {0}% more damage, defence increased by {1}, but health reduced by {2}
+			}
 		}
 	}
 }
