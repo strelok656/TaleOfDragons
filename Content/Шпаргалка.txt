@@ -1,0 +1,6 @@
+https://terraria.fandom.com/wiki/Rarity // Редкости
+https://terraria.wiki.gg/wiki/Use_Style_IDs // Стили использования оружия
+https://terraria.wiki.gg/wiki/Sound_IDs // Звуки
+https://terraria.wiki.gg/wiki/Tile_IDs // Станции крафта
+https://terraria.fandom.com/wiki/Buff_IDs // Баффы
+https://terraria.fandom.com/wiki/Dust_IDs // Частицы

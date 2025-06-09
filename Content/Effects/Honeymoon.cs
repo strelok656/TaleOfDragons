@@ -7,10 +7,10 @@ namespace TaleOfDragons.Content.Effects
     internal class Honeymoon : ModBuff
     {
         public static readonly int defenseBonus = 5;
-        public static readonly int damageBonus = 15;
+        public static readonly float damageBonus = 0.15f;
         public static readonly int healthReduction = 30;
 
-        public override LocalizedText Description => base.Description.WithFormatArgs(damageBonus, defenseBonus, healthReduction);
+        public override LocalizedText Description => base.Description.WithFormatArgs(damageBonus * 10, defenseBonus, healthReduction);
 
         public override void Update(Player player, ref int buffIndex)
         {

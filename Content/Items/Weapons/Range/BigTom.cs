@@ -18,7 +18,7 @@ namespace TaleOfDragons.Content.Items.Weapons.Range
         {
             Item.width = 50;
             Item.height = 50;
-            Item.scale = 2.0f;
+            Item.scale = 0.05f;
             Item.rare = ItemRarityID.Lime;
             Item.damage = 500;
             Item.DamageType = DamageClass.Ranged;
@@ -34,6 +34,6 @@ namespace TaleOfDragons.Content.Items.Weapons.Range
             Item.useAmmo = AmmoID.Bullet;
         }
 
-        public override Vector2? HoldoutOffset() => new Vector2(1f, -1f);
+        public override Vector2? HoldoutOffset() => new Vector2(2f, -1f);
     }
 }

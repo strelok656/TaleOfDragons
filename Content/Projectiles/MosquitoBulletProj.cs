@@ -5,13 +5,13 @@ using Terraria.ModLoader;
 
 namespace TaleOfDragons.Content.Projectiles
 {
-    internal class MosquitoBulletProjectile : ModProjectile
+    internal class MosquitoBulletProj : ModProjectile
     {
         public override void SetDefaults()
         {
             Projectile.width = 26;
             Projectile.height = 9;
-            Projectile.scale = 1f;
+            Projectile.scale = 0.1f;
             Projectile.aiStyle = 0;
             Projectile.friendly = true;
             Projectile.timeLeft = 300;
@@ -19,13 +19,11 @@ namespace TaleOfDragons.Content.Projectiles
         }
         
         public override void OnKill(int timeLeft)
-        {
-            
-            Vector2 launchVelocity = new(Main.rand.Next(-10, 10), Main.rand.Next(-10, 10));
+        {            
             if (Main.myPlayer == Projectile.owner)
             {
                 for (int i = 0; i < 3; i++)
-                    Projectile.NewProjectile(Projectile.InheritSource(Projectile), Projectile.Center, launchVelocity, ModContent.ProjectileType<Mosquito>(), Projectile.damage / 2, Projectile.knockBack, Projectile.owner);
+                    Projectile.NewProjectile(Projectile.InheritSource(Projectile), Projectile.Center, new Vector2 (Main.rand.Next(-2, 2), Main.rand.Next(-2, 2)), ModContent.ProjectileType<BigTomProj>(), Projectile.damage / 2, Projectile.knockBack, Projectile.owner);
             }   
         }
 

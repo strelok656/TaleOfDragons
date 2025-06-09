@@ -1,11 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
+using System;
 using Terraria;
+using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace TaleOfDragons.Content.Projectiles
 {
-    internal class Mosquito : ModProjectile
+    internal class BigTomProj : ModProjectile
     {
         private NPC HomingTarget
         {
@@ -28,9 +30,32 @@ namespace TaleOfDragons.Content.Projectiles
             Projectile.width = Projectile.height = 8;
             Projectile.DamageType = DamageClass.Ranged;
             Projectile.friendly = true;
-            Projectile.hostile = false;
-            Projectile.timeLeft = 600;
+            Projectile.timeLeft = 300;
             Projectile.penetrate = 3;
+        }
+
+        public override bool OnTileCollide(Vector2 oldVelocity)
+        {
+            Projectile.penetrate--;
+            if (Projectile.penetrate <= 0)
+                Projectile.Kill();
+            else
+            {
+                Collision.HitTiles(Projectile.position, Projectile.velocity, Projectile.width, Projectile.height);
+                SoundEngine.PlaySound(SoundID.Item10, Projectile.position);
+
+                if (Math.Abs(Projectile.velocity.X - oldVelocity.X) > float.Epsilon)
+                {
+                    Projectile.velocity.X = -oldVelocity.X;
+                }
+
+                if (Math.Abs(Projectile.velocity.Y - oldVelocity.Y) > float.Epsilon)
+                {
+                    Projectile.velocity.Y = -oldVelocity.Y;
+                }
+            }
+
+            return false;
         }
 
         public override void AI()

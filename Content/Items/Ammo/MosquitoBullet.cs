@@ -23,7 +23,7 @@ namespace TaleOfDragons.Content.Items.Ammo
             Item.knockBack = 10f;
             Item.value = 10;
             Item.consumable = true;
-            Item.shoot = ModContent.ProjectileType<MosquitoBulletProjectile>();
+            Item.shoot = ModContent.ProjectileType<MosquitoBulletProj>();
             Item.shootSpeed = 4.5f;
             Item.ammo = AmmoID.Bullet;
             Item.maxStack = Item.CommonMaxStack;

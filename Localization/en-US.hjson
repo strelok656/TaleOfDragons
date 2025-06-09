@@ -25,17 +25,26 @@ Mods: {
 					 How tasty!
 					'''
 			}
+
+			DeathBreath: {
+				Tooltip: ""
+				DisplayName: Death Breath
+			}
 		}
 
 		Projectiles: {
 			MosquitoBulletProjectile.DisplayName: Mosquito Bullet Projectile
+			MosquitoBulletProj.DisplayName: Mosquito Bullet Proj
 			Mosquito.DisplayName: Mosquito
+			DeathBreathProj.DisplayName: Death Breath Proj
+			DeathBreathCloud.DisplayName: Death Breath Cloud
+			BigTomProj.DisplayName: Big Tom Proj
 		}
 
 		Buffs: {
 			Honeymoon: {
 				DisplayName: Honeymoon
-				Description: Does {0}% more damage, defence increased by {1}, but health reduced by {2}
+				Description: Does {0}% more damage, defense increased by {1}, but health reduced by {2}
 			}
 		}
 	}
